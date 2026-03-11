@@ -12,17 +12,24 @@
 
 .sidebar {
     grid-area: 1 / 1 / 3 / 2;
-    border: 1px solid black;
-    background-color: blue;
+    background-color: rgb(55, 172, 240);
     color: white;
     font-size: 2em;
     padding: 1em;
+    font-weight: 600;
 }
 
 .sidebar > ul {
     margin-top: 2em;
-    list-style: none;
+    padding-left: 0;
+    list-style:none;
+    border: 1px solid red;
 }
+
+/* .sidebar .icon {
+    offset: 10, 100;
+} */
+
 
 .header {
     margin-bottom: 3em;
@@ -38,30 +45,33 @@
 .searchbar {
     outline: none;
     border: none;
-    background-color: lightgrey;
+    background-color:rgb(201, 204, 223);
     border-radius: 5px;
     padding: 0.5em;
     width: 70%;
 }
 
 .content {
-    background-color: lightgray;
+    background-color: rgb(201, 204, 223);
     padding: 1em;
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
-.announcements {
+.announcements,
+.trending {
     padding: 1em;
 }
 
-.announcement_title {
+.announcement_title,
+.trending_caption {
     margin-bottom: 1em;
     font-weight: bold;
 }
 
-.announcements > ul {
+.announcements > ul,
+.trending > ul {
     list-style: none;
     background-color: white;
     border-radius: 10px;
@@ -74,10 +84,29 @@
     margin-top: 1em;
 }
 
+.trending_header {
+    font-weight: 600;
+}
+
 .projects {
     grid-area: 1 / 1 / 3 / 2;
 }
 
 .icon {
     height: 1.5em;
+}
+
+.project_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    row-gap: 2em;
+}
+
+.card {
+    width: 300px;
+    height: 220px;
+    background-color: white;
+    border-radius: 1em;
+    border-left: 10px solid rgb(245, 177, 31);
+    padding: 1em;
 }
