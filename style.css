@@ -23,12 +23,23 @@
     margin-top: 2em;
     padding-left: 0;
     list-style:none;
-    border: 1px solid red;
 }
 
-/* .sidebar .icon {
-    offset: 10, 100;
-} */
+.logo {
+    display: grid;
+    grid-auto-flow: column;
+    font-size: 1em;
+    gap: 10px;
+    justify-content: left;
+}
+
+.sidebar li {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: left;
+    gap: 10px;
+    margin: 0.2em;
+}
 
 
 .header {
@@ -49,6 +60,21 @@
     border-radius: 5px;
     padding: 0.5em;
     width: 70%;
+}
+
+.interactions {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2em;
+}
+
+.interactions > button {
+    background-color: rgb(55, 172, 240);
+    padding: 0.3em;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    color: white;
 }
 
 .content {
@@ -96,6 +122,12 @@
     height: 1.5em;
 }
 
+.project_title {
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-bottom: 0.5em;
+}
+
 .project_cards {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
@@ -109,4 +141,17 @@
     border-radius: 1em;
     border-left: 10px solid rgb(245, 177, 31);
     padding: 1em;
+    display: grid;
+    grid-template-rows: 2em 1fr 2em;
+}
+
+.card_title {
+    font-weight: 800;
+}
+
+.card_options{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 5px;
 }
